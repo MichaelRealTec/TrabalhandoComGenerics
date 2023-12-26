@@ -10,20 +10,18 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 
-		PrintService ps = new PrintService();
+		PrintService<String> ps = new PrintService<>(); // Sinal de menor e sinal de maior indica que é do tipo generics
 		
 		System.out.println("How many values?");
 		int n = sc.nextInt();
 		
-		ps.addValue("Maria");
-		
 		for (int i = 0; i < n; i++) {
-			Integer value = sc.nextInt();
+			String value = sc.next();
 			ps.addValue(value);
 		}
 		
 		ps.print();
-		Integer x = (Integer) ps.first(); // não pode converter object para int se não por casting
+		String x = ps.first(); // não pode converter object para int se não por casting
 		System.out.println("First: " + x);
 		
 		sc.close();

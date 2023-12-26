@@ -3,9 +3,9 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
+public class PrintService<T> {
 	// Atributos
-	List<Object> list = new ArrayList<>();
+	List<T> list = new ArrayList<>();
 	
 	// Método Construtor
 	public PrintService() {
@@ -13,11 +13,11 @@ public class PrintService {
 	}
 	
 	// Métodos
-	public void addValue(Object value) {
+	public void addValue(T value) {
 		list.add(value);
 	}
 	
-	public Object first() {
+	public T first() {
 		if(list.isEmpty()) {
 			throw new IllegalStateException("List is empty");
 		}
