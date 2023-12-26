@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PrintService {
 	// Atributos
-	List<Integer> list = new ArrayList<>();
+	List<Object> list = new ArrayList<>();
 	
 	// Método Construtor
 	public PrintService() {
@@ -13,11 +13,11 @@ public class PrintService {
 	}
 	
 	// Métodos
-	public void addValue(Integer value) {
+	public void addValue(Object value) {
 		list.add(value);
 	}
 	
-	public Integer first() {
+	public Object first() {
 		if(list.isEmpty()) {
 			throw new IllegalStateException("List is empty");
 		}
